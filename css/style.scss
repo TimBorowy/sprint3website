@@ -1,3 +1,23 @@
 body {
-	background-color:red;
+	background-color: #b0b0b0;
+	margin: 0;
+}
+
+.col{
+	height: 500px;
+}
+.picture{
+	background-image: url('https://picsum.photos/700/500');
+	background-position: center;
+}
+.testimonial-image{
+	img{
+		width: 100%;
+		border-radius: 50%;
+	}
+	
+}
+
+.testimonials{
+	margin: 20px;
 }
