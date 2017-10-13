@@ -1,14 +1,18 @@
 body {
-	background-color: #b0b0b0;
+	background-color: #B0BEC5;
 	margin: 0;
 }
-
-.col{
+.blockquote{
+	display: none;
+}
+.section{
 	height: 500px;
 }
 .picture{
-	background-image: url('https://picsum.photos/700/500');
+	background-image: url('../media/500.jpg');
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .testimonial-image{
 	img{
