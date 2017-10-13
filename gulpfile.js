@@ -20,7 +20,7 @@ elixir(function(mix) {
 	]);//.copy('./css/font-awesome-4.7.0/fonts', 'public/fonts/font-awesome');
 
 	mix.scripts([
-		//'./node_modules/jquery/dist/jquery.js',
+		'./node_modules/jquery/dist/jquery.js',
 		//'./node_modules/autosize/dist/autosize.js',
 		'/js/javascript.js',
 	]);
