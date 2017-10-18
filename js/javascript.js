@@ -34,14 +34,10 @@ setInterval(
 , 4500); // each loop takes 4,5 seconds
 
 
-$("button").click(function(){
-    $("#div1").fadeIn();
-    $("#div2").fadeIn("slow");
-    $("#div3").fadeIn(3000);
+var map;
+function initMap() {
+map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: 51.920964, lng: 4.470492}, 
+  zoom: 12
 });
-
-$("button").click(function(){
-    $("#div1").fadeOut();
-    $("#div2").fadeOut("slow");
-    $("#div3").fadeOut(3000);
-});
+}

@@ -1,10 +1,9 @@
 body {
-	background-color: #B0BEC5;
 	margin: 0;
 }
 
-.section{
-	height: 500px;
+.sectionBlock{
+	min-height: 400px;
 }
 .picture{
 	background-image: url('../media/500.jpg');
@@ -23,4 +22,18 @@ body {
 	-moz-transition: opacity .5s ease-in-out;
 	-o-transition: opacity .5s ease-in-out;
 	transition: opacity .5s ease-in-out;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+}
+
+#popupVideo{
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 20px;
+	bottom: 20px;
+	z-index: 999;
 }

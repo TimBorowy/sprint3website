@@ -2,22 +2,22 @@
 <html>
 
 <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    
-    <link rel="stylesheet" href="css/app.css">
-    <!--zodat de browser weet dat het ook voor mobiel is-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dinges website</title>
+
+	<link rel="stylesheet" href="css/app.css">
+	<!--zodat de browser weet dat het ook voor mobiel is-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>dinges website</title>
 </head>
 
 <body>
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <a class="navbar-brand" href="#">Navbar</a>
+		  <a class="navbar-brand" href="#">Our name</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -28,7 +28,16 @@
 		        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
+		        <a class="nav-link" href="#">What is it?</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Testimonials</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Features</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">About us</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -36,21 +45,25 @@
 	</header>
 	<main>
 		<div class="container-fluid">
-			<div class="row section">
-				<div class="col-lg-6 col-md-12 picture">
-					<h1 class="display-1 text-right">Big Text</h1>
+			<div class="row">
+				<div class="col-lg-6 col-md-12 picture py-5">
+					<h1 class="display-1 text-right text-light">Our name</h1>
 				</div>
-				<div class="col-lg-6 col-md-12">
-					<p class='display-1'>Other big text</p>
-					<p>sub text to explaing something</p>
+				<div class="col-lg-6 col-md-12 py-5">
+					<p class='display-1'>The next big thing</p>
+					<p>Our product is going to rock your world because it is awesome</p>
+					<button type="button" class="btn btn-lg btn-outline-success">See why</button>
 				</div>
 			</div>
+			<!-- <div id="popupVideo">	
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/hmzqHfvL3ro?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div> -->
 
-			<div class="row section">
-				<div id="testimonialPicture" class="col-lg-6 col-md-12 picture">
+			<div class="row">
+				<div id="testimonialPicture" class="col-lg-6 col-md-12 picture sectionBlock">
 				</div>
-				<div class="col-lg-6 col-md-12 row d-flex justify-content-center align-items-center">
-					<div style="width: 80%;">
+				<div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center sectionBlock">
+					<div style="width: 80%;" class="m-4">
 						<blockquote class="blockquote" style="display: block" data-id="0">
 					  		<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -83,18 +96,46 @@
 				</div>
 			</div>
 
-			<div class="row section">
-				<div class="col-lg-6 col-md-12">
-					details / pricing
+			<div class="row">
+				<div style="background: #42a5f5;" class="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center py-5">
+
+					<div style="width: 80%" class="">
+						<h2 class="text-light">Contact us.</h2>
+						<form>
+						  <div class="form-group"> 
+						    <label class="form-control-label text-light" for="name">Name:</label>
+						    <input type="text" class="form-control" id="name" placeholder="What is your name?">
+						  </div>
+						  <div class="form-group">
+						    <label class="form-control-label text-light" for="email">Email adress:</label>
+						    <input type="email" class="form-control" id="email" placeholder="Please fill in your email adress">
+						  </div>
+						  <div class="form-group">
+						    <label for="textarea" class="text-light">Your question:</label>
+						    <textarea class="form-control " id="textarea" placeholder="What would you like us to answer?" rows="3"></textarea>
+						  </div>
+						  <button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+
 				</div>
-				<div class="col-lg-6 col-md-12 picture">
-				  
+				<div class="col-lg-6 col-md-12 sectionBlock p-0">
+				  <div id="map"></div>
 				</div>
 			</div>
 		</div>
 	</main>
-	<footer>
-		
+	<footer class="bd-footer text-muted">
+		<div class="container-fluid p-3 p-md-5">
+		<ul class="bd-footer-links">
+		<li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+		<li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+		<li><a href="/examples/">Examples</a></li>
+		<li><a href="/about/history/">About</a></li>
+		</ul>
+		<p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank" rel="noopener">@mdo</a> and <a href="https://twitter.com/fat" target="_blank" rel="noopener">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+		<p>Currently v4.0.0-beta. Code licensed <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license noopener" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+		</div>
 	</footer>
 	
 </body>
@@ -106,6 +147,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL8--UKkql-KN1v8gfzTif4ufxuwBk-m0&callback=initMap"
+    async defer></script>
 
 
 
