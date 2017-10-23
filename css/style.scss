@@ -106,15 +106,15 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .btn-watch {
-	background-color:#fff;
-	border:2px solid #20b98d;
-	color:#20b98d;
-}
-
-.btn-watch:hover {
 	background-color:#20b98d;
 	border:2px solid #fff;
 	color:#fff;
+}
+
+.btn-watch:hover {
+	background-color:#fff;
+	border:2px solid #20b98d;
+	color:#20b98d;
 }
 
 .btn-order {
