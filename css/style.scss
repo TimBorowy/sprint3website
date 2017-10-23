@@ -2,13 +2,22 @@ body {
 	margin: 0;
 }
 
+main {
+	position:relative;
+	top:56px;
+}
+
 .navbar {
 	position: fixed;
     top: 0;
     z-index: 2;
-    background-color:#fff;
+    background-color:#2b2d2f;
     width:100%;
-    color:#e4e4e4;
+    
+}
+
+a.nav-link {
+	color:#e4e4e4;
 }
 
 .sectionBlock{
