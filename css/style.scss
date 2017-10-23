@@ -12,12 +12,17 @@ main {
     top: 0;
     z-index: 2;
     background-color:#2b2d2f;
-    width:100%;
-    
+    width:100%;   
 }
 
 a.nav-link {
 	color:#e4e4e4;
+	font-weight:300;
+}
+
+.navbar-brand {
+	color:#20b98d;
+	font-weight:500;
 }
 
 .sectionBlock{
