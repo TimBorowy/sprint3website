@@ -18,6 +18,16 @@ main {
 a.nav-link {
 	color:#e4e4e4;
 	font-weight:300;
+
+		-o-transition:.5s;
+  		-ms-transition:.5s;
+  		-moz-transition:.5s;
+  		-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+a.nav-link:hover, a.nav-link:active {
+	color:#20b98d;
 }
 
 .navbar-brand {
