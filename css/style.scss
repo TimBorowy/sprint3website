@@ -15,7 +15,7 @@ main {
     width:100%;   
 }
 
-a.nav-link {
+a.nav-link, a.bd-footer {
 	color:#e4e4e4;
 	font-weight:300;
 
@@ -26,7 +26,7 @@ a.nav-link {
   	transition:.5s;
 }
 
-a.nav-link:hover, a.nav-link:active {
+a.nav-link:hover, a.nav-link:active, a.bd-footer:hover {
 	color:#20b98d;
 }
 
@@ -168,5 +168,11 @@ a.nav-link:hover, a.nav-link:active {
 
 .form-control {
 	border-radius:0px;
+}
+
+
+
+.bd-footer {
+	background-color:#2b2d2f;
 }
 
