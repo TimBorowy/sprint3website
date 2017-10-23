@@ -43,7 +43,6 @@ body {
 .products-row {
   	padding:100px 0px 100px 0px;
   	background-color:#20b98d;
-  	max-width:100%;
 }
 
 .products-text {
@@ -119,4 +118,12 @@ body {
 
 .collaborate {
     color:#00af7d;
+}
+
+
+
+@media screen and (min-width: 1060px) {
+	.btn-watch {
+    	margin-bottom: 10px;
+	}
 }
