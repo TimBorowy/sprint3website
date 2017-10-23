@@ -182,3 +182,12 @@ a.nav-link:hover, a.nav-link:active {
 .bd-footer a {
 	color:#20b98d;
 }
+
+.bd-footer a:hover {
+	border-left: 2px solid #20b98d;
+	text-decoration:none;
+}
+
+.bd-footer li {
+	list-style:none;
+}
