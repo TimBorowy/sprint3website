@@ -16,8 +16,8 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass([
     	'./css/style.scss',
-    	//'./css/font-awesome-4.7.0/scss/font-awesome.scss'
-	]);//.copy('./css/font-awesome-4.7.0/fonts', 'public/fonts/font-awesome');
+    	'./css/font-awesome-4.7.0/scss/font-awesome.scss'
+	]).copy('./css/font-awesome-4.7.0/fonts', 'public/fonts/font-awesome');
 
 	mix.scripts([
 		'./node_modules/jquery/dist/jquery.js',
