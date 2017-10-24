@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	color:#3e3f40;
 }
 
 main {
@@ -38,8 +39,7 @@ a.nav-link:hover, a.nav-link:active {
 
 #header-row {
 	width:100%;
-  height:100%;
-  height:calc(100% - 1px);
+  	height: calc(100vh - 56px);
 }
 
 
@@ -48,14 +48,14 @@ a.nav-link:hover, a.nav-link:active {
 	min-height: 400px;
 }
 .picture{
-	background-image: url('../media/500.jpg');
+	background-image: url('../media/header-bg.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 #testimonialPicture{
-	background-image: url('../media/501.jpg');
+	background-image: url('../media/test2.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -84,13 +84,12 @@ a.nav-link:hover, a.nav-link:active {
 
 .products-row {
   	padding:100px 0px 100px 0px;
-  	background-color:#20b98d;
+  	// background-color:#20b98d;
 }
 
 .products-text {
   	padding-right:100px;
   	padding-left:100px;
-  	color:#fff;
 }
 
 .prod-img {
@@ -103,6 +102,7 @@ a.nav-link:hover, a.nav-link:active {
 
 .btn {
 	border-radius: 0px;
+	cursor:pointer;
 }
 
 .btn-watch {
@@ -115,6 +115,11 @@ a.nav-link:hover, a.nav-link:active {
 	background-color:#fff;
 	border:2px solid #20b98d;
 	color:#20b98d;
+}
+
+#contact {
+	background-color:#20b98d;
+	color:#fff;
 }
 
 .btn-order {
@@ -184,7 +189,7 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .bd-footer a:hover {
-	border-left: 2px solid #20b98d;
+	// border-left: 2px solid #20b98d;
 	text-decoration:none;
 }
 
@@ -200,6 +205,9 @@ a.nav-link:hover, a.nav-link:active {
 	padding-left:10px;
 }
 
+
+
+
 .social-icons-container {
   //padding-top: 30px;
   a {
@@ -214,9 +222,18 @@ a.nav-link:hover, a.nav-link:active {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      -moz-transition: all 0.3s;
+	  -webkit-transition: all 0.3s;
+	  transition: all 0.3s;
       i {
         font-size: 2rem;
       }
+    }
+    .social-icon:hover {
+    	-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
     }
   }
 }

@@ -2,7 +2,7 @@ console.log('hello!');
 
 
 // testimonial slide show
-var items =["501.jpg", "502.jpg", "503.jpg"], counter = 1, previous = 0;
+var items =["test2.png", "test1.png", "test3.png"], counter = 1, previous = 0;
 
 setInterval(
 	function(){
