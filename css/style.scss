@@ -36,6 +36,10 @@ a.nav-link:hover, a.nav-link:active {
 	font-weight:500;
 }
 
+#navbarTogglerDemo02 {
+	padding-left:20px;
+}
+
 
 #header-row {
 	width:100%;
@@ -107,8 +111,16 @@ a.nav-link:hover, a.nav-link:active {
 
 .btn-watch {
 	background-color:#20b98d;
-	border:2px solid #fff;
+	border:2px solid #20b98d;
 	color:#fff;
+}
+
+.btn-send {
+	border:2px solid #fff;
+}
+
+.btn-vid {
+	margin-top: 20px;
 }
 
 .btn-watch:hover {
