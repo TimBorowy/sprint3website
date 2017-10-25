@@ -22,8 +22,8 @@ elixir(function(mix) {
 
 	mix.scripts([
 		'./node_modules/jquery/dist/jquery.js',
-		//'./node_modules/autosize/dist/autosize.js',
-		'/js/javascript.js',
 		'/js/lity.min.js',
+		'/js/javascript.js',
+		
 	]);
 });
