@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="css/app.css">
+	<!--zodat de browser weet dat het ook voor mobiel is-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Checkout | CLE 1: Sprint 3</title>
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg">
+		  <a class="navbar-brand uppercase" href="index.html">Group 40</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse uppercase" id="navbarTogglerDemo02">
+		    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html#features">Functies</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html#testimonials">Testimonials</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html#product">Product</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html#contact">Contact</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+	<main>
+		<div class='container'>
+			<div class="checkout-wrap">
+				<div class="checkout-bar m-4 d-flex flex-column flex-md-row justify-content-lg-between">
+					<div class="checkout-item p-3 m-1 active">Login</div>
+					<div class="checkout-item p-3 m-1 ">Verzending</div>
+					<div class="checkout-item p-3 m-1 ">Betaling</div>
+					<div class="checkout-item p-3 m-1 ">Compleet!</div>
+				</div>
+			</div>
+			
+				<div class="row checkoutProcess my-5 active" id="step-1">
+			        <div class="col-lg-6 mb-4 ">
+			        	<h3>Ik heb al een account</h3>
+						<form>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email adres</label>
+						    <input type="email" class="form-control" id="emailAddress" required placeholder="email">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Wachtwoord</label>
+						    <input type="password" class="form-control" id="password" required placeholder="Wachtwoord">
+						  </div>
+						  <button type="submit" class="btn btn-primary" id='doesHaveAccount'>Verzenden</button>
+						</form>
+			        </div>
+
+			        <div class="col-lg-6 mb-4 ">
+			        	<h3>Ik heb nog geen account</h3>
+			        	<p>In de volgende stap kun je je gegevens invullen</p>
+			          	<button class='btn' id="doesNotHaveAccount">Doorgaan</button>
+			        </div>
+				</div>
+
+				<div class='row checkoutProcess my-5' id="step-2">
+					<div class="col-lg-6 mb-4 ">
+			        	<h3>Verzend gegevens</h3>
+						<form name='shippingForm'>
+						  <div class="form-group">
+						    <label for="name">Naam</label>
+						    <input type="text" class="form-control" id="name" required placeholder="Pietje Puk">
+						  </div>
+
+						  <div class="form-group">
+						    <label for="adres">adres</label>
+						    <input type="text" class="form-control" id="address" required placeholder="Bashlaan 123">
+						  </div>
+
+							<div class="form-group">
+								<label for="postcode">Postcode</label>
+								<input type="text" class="form-control" id="postalcode" required placeholder="1234AB">
+							</div>
+
+							<div class="form-group">
+								<label for="stad">Stad</label>
+								<input type="text" class="form-control" id="city" required placeholder="Rotterdam">
+							</div>
+
+							<div class="form-group">
+								<select class="custom-select" id="country" required>
+									<option selected disabled="true">Land</option>
+									<option value="Nederland">Nederland</option>
+									<option value="Belgie">Belgie</option>
+									<option value="Duitsland">Duitsland</option>
+								</select>
+					  		</div>
+							<button type="submit" class="btn btn-primary" id="shippingDetails">Doorgaan</button>
+						</form>
+			        </div>
+				</div>
+
+				<div class="row checkoutProcess my-5" id="step-3">
+			        <div class="col-lg-6 mb-4 ">
+			        	<h3>Overzicht van je bestelling</h3>
+
+			        	<b>Adres:</b>
+			        	<p><span id="order_name"></span><br/>
+			        		<span id="order_address"></span><br/>
+			        		<span id="order_postalcode"></span> <span id="order_city"></span><br/>
+			        		<span id="order_country"></span>
+			        	</p>
+						<b>Artikelen:</b>
+						<p>1x ColorMatch</p>
+			        </div>
+
+			        <div class="col-lg-6 mb-4 ">
+			        	<h3>Hoe wil je betalen?</h3>
+			        	<p>Nadat je hebt betaald kun je je bestelling afronden</p>
+						<div class="list-group">
+							<a href="#" class="list-group-item list-group-item-action paymentOption">Paypal</a>
+							<a href="#" class="list-group-item list-group-item-action paymentOption">Ideal</a>
+							<a href="#" class="list-group-item list-group-item-action paymentOption">Creditcard</a>
+						</div>
+			        </div>
+				</div>
+
+				<div class="row checkoutProcess my-5" id="step-4">
+			        <div class="col-lg-6 mb-4 ">
+			        	<h3>Bedankt voor je bestelling!</h3>
+			        	<p>Je bestelling word nu verwerkt en je zult een bericht krijgen als de status veranderd</p>
+			        </div>
+				</div>
+
+	    	<!-- </div> -->
+		</div>
+		<div class="container-fluid">
+			<div class="row" id="contact">
+				<div style="" class="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center py-5">
+
+					<div style="width: 80%" class="">
+						<h2 class="">Contact</h2>
+						<form>
+						  <div class="form-group"> 
+						    <label class="form-control-label" for="name">Naam:</label>
+						    <input type="text" class="form-control" id="name" placeholder="Wat is uw naam?">
+						  </div>
+						  <div class="form-group">
+						    <label class="form-control-label" for="email">Emailadres:</label>
+						    <input type="email" class="form-control" id="email" placeholder="Vul alstublieft uw emailadres in">
+						  </div>
+						  <div class="form-group">
+						    <label for="textarea" class="">Uw vraag/opmerking:</label>
+						    <textarea class="form-control " id="textarea" placeholder="Vertel ons wat u wilt weten" rows="3"></textarea>
+						  </div>
+						  <button type="submit" class="btn btn-primary btn-lg btn-watch btn-send">Verstuur</button>
+						</form>
+					</div>
+
+				</div>
+				<div class="col-lg-6 col-md-12 sectionBlock p-0">
+				  <div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="bd-footer">
+		<div class="container-fluid p-3 p-md-5 text-light">
+		
+		<div class="d-flex justify-content-center align-items-center social-icons-container">
+			<a href="#" target="_blank">
+				<div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+			</a>
+			<a href="#" target="_blank">
+				<div class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+			</a>
+			<a href="#">
+				<div class="social-icon"><i class="fa fa-at" aria-hidden="true"></i></div>
+			</a>
+		</div>
+
+		<ul class="nav justify-content-center">
+		<li class="nav-item">
+		<a class="nav-link active" href="#">Home</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Functies</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Testimonials</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Product</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Contact</a>
+		</li>
+		</ul>
+
+		</div>
+	</footer>
+	
+</body>
+
+<script src="js/all.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL8--UKkql-KN1v8gfzTif4ufxuwBk-m0&callback=initMap" async defer></script>
+
+</html>

@@ -266,3 +266,96 @@ map = new google.maps.Map(document.getElementById('map'), {
 map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
 }
+
+
+/* progress checkout */
+
+var step1 = $('#step-1');
+var step2 = $('#step-2');
+var step3 = $('#step-3');
+var step4 = $('#step-4');
+
+//step 1
+$('#doesHaveAccount').click(function(e){
+	e.preventDefault();
+
+	if(validateLogin()){
+
+		$('.checkout-item:first').addClass('done');
+		$('.checkout-item:nth(1)').addClass('done');
+		$('.checkout-item:nth(2)').addClass('active');
+		step1.hide();
+		step3.css({'display': 'flex'});
+	}
+});
+//step 1
+$('#doesNotHaveAccount').click(function(e){
+	e.preventDefault();
+	$('.checkout-item:first').addClass('done');
+	$('.checkout-item:nth(1)').addClass('active');
+	step1.hide();
+	step2.css({'display': 'flex'});
+});
+// step 2
+$('#shippingDetails').click(function(e){
+	e.preventDefault();
+
+	if(validateShippingForm()){
+
+		$('.checkout-item:nth(1)').addClass('done');
+		$('.checkout-item:nth(2)').addClass('active');
+
+
+		$('#order_name').html($('#name').val());
+		$('#order_address').html($('#address').val());
+		$('#order_postalcode').html($('#postalcode').val());
+		$('#order_city').html($('#city').val());
+		$('#order_country').html($('#country').val());
+
+		step2.hide();
+		step3.css({'display': 'flex'});
+	}
+});
+
+// step 3
+$('.paymentOption').click(function(e){
+	e.preventDefault();
+	$('.checkout-item:nth(2)').addClass('done');
+	$('.checkout-item:nth(3)').addClass('active');
+	step3.hide();
+	step4.css({'display': 'flex'});
+});
+
+
+function validateShippingForm(){
+	var name = $('#name').val();
+	var address = $('#address').val();
+	var postalcode = $('#postalcode').val();
+	var city = $('#city').val();
+	var country = $('#country').val();
+
+	if (name == "" || address == "" || postalcode == "" || postalcode.length != 6 || city == "" || country == "") {
+        alert("Alle velden moeten ingevuld worden");
+        return false;
+    }
+    return true;
+    
+}
+
+function validateLogin(){
+	var email = $('#emailAddress').val();
+	var password = $('#password').val();
+
+	if (email == "" || !validateEmail(email) || password == "") {
+        alert("Alle velden moeten ingevuld worden");
+        return false;
+    }
+    return true;
+
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
